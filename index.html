@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Eagle</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png">
+        </div>
+        <ul>
+            <li> <a href="#" class="active">Home</a></li>
+            <li> <a href="#">Portafolio</a></li>
+            <li> <a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="main-section-text">
+            <p class="main-title">
+                Welcome
+            </p>
+            <p class="main-description">
+                stranger
+            </p>
+        </div>
+        <img class="main-section-img" src="img\evva2.jpg" alt="">
+
+        <div class="contact-section">
+            <h1>Contact me</h1>
+            <h3>Questions or commissions</h3>
+            <div class="contact-box">
+                <div class="contact-container" id="main-div">
+                    <div class="contact">
+                        <p>Your email</p>
+                        <input type="text" name="email" id="youremail" placeholder="Your email">
+
+                    </div>
+                    <div class="contact">
+                        <p>Your name</p>
+                        <input type="text" name="name" id="yourname" placeholder="Your name">
+
+                    </div>
+                    <div class="contact">
+                        <p>Your message</p>
+                        <input type="text" name="message" id="yourmessage" placeholder=" Your message">
+
+                    </div>
+                    <div class="send-button">
+                        <button id="send_button" type="button">Send</button>
+
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+        <footer>Parcial #1: Erick Garcia Valenzuela Programacion en internet</footer>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop()) {
+            $('nav').addClass('black');
+        }
+        else {
+            $('nav').removeClass('black');
+        }
+    })
+
+</script>
+<script src="index.js"></script>
+
+</html>
