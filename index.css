@@ -67,7 +67,7 @@ nav ul li a:hover
 }
 .main-section-text{
     bottom: 20px;
-    left: 20px;
+    left: 80px;
     position: absolute;
     font-family: sans-serif;
     text-shadow: 2px 2px black;
@@ -202,7 +202,7 @@ nav ul li a:hover
      color: red;
  }
  .img-container .box .details .content p{
-     margin:10px 0 0;
+     margin: 10px 0 0;
      padding: 0;
  }
 
