@@ -74,18 +74,21 @@ nav ul li a:hover
 }
 .main-title{
     color: #fff;
-    font-size: 3.0em;
-    margin-bottom: 0px;
+    font-size: 2.0em;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .main-description{
     color: #fff;
     font-size: 6.0em;
-    margin-top: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .main-section-img{
     object-fit: cover;
     height: 900px;
     width: 100%;
+   
     
 }
 
@@ -196,12 +199,14 @@ nav ul li a:hover
      margin: 0;
      padding: 0;
      font-size: 20px;
-     color: #ff0;
+     color: red;
  }
  .img-container .box .details .content p{
      margin:10px 0 0;
      padding: 0;
  }
+
+ 
 
 
  

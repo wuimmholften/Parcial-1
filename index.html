@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Elite Eagle</title>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
@@ -26,8 +27,8 @@
             <p class="main-title">
                 Welcome
             </p>
-            <p class="main-description">
-                stranger
+            <p class="main-description" id="main">
+                
             </p>
         </div>
         <img class="main-section-img" src="img\evva2.jpg" alt="">
@@ -177,5 +178,44 @@
 
 </script>
 <script src="index.js"></script>
+<script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+<script>
 
+    container = document.getElementById("main");
+
+    var text = new Blotter.Text("stranger", {
+        family: "serif",
+        size: 120,
+        fill: "#000",
+        paddingLeft: 0,
+        paddingRight: 80,
+        paddingTop: 0,
+        paddingBottom: 80,
+      
+    })
+
+    var material = new Blotter.ChannelSplitMaterial();
+    material.uniforms.uOffset.value = 0.05;
+    material.uniforms.uRotation.value = 50;
+    material.uniforms.uApplyBlur.value = 1;
+    material.uniforms.uAnimateNoise.value = 0.3;
+
+    var blotter = new Blotter(material, {
+        texts: text
+    })
+
+    var scope = blotter.forText(text);
+
+    scope.appendTo(container);
+
+    // Add mousemove effect
+
+    document.onmousemove = moveIt;
+    function moveIt(event) {
+        material.uniforms.uRotation.value = (event.clientX * .1);
+        material.uniforms.uOffset.value = (event.clientX * 0.0001);
+    }
+
+</script>
 </html>
